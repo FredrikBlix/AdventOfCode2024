@@ -26,4 +26,4 @@ This is my repository for solutions to [Advent of Code 2024](https://adventofcod
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the Santa-Clause License. See the [LICENSE](./LICENSE) file for details.
