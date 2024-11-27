@@ -1,0 +1,9 @@
+
+# vscode ignored files
+.vscode/
+*.code-workspace
+
+# Python-specific ignored files
+__pycache__/
+*.pyc
+.env
