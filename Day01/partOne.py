@@ -19,7 +19,6 @@ def parse_input(input_data, verbose = False):
 
 def part_one(input_data, verbose = False):
     left_list, right_list = parse_input(input_data, verbose)
-
     total_sum = 0;
     for i in range(len(left_list)):
         total_sum +=  abs(left_list[i] - right_list[i])
