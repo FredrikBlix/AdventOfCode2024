@@ -1,7 +1,7 @@
 import unittest
 import os
 
-from partOne import part_one, parse_input, distance_between_points, distance_between_lists
+from partOne import part_one, parse_input
 
 class TestMainFunctions(unittest.TestCase):
 
@@ -17,14 +17,6 @@ class TestMainFunctions(unittest.TestCase):
     def test_parse_input(self):
         result = parse_input(self.input_sample_one.strip())
         self.assertEqual(result, ([1, 2, 3, 3, 3, 4], [3, 3, 3, 4, 5, 9]))
-        
-    def test_destance_between_points(self):
-        result = distance_between_points(1, 2)
-        self.assertEqual(result, 1)
-    
-    def test_destance_between_lists(self):
-        result = distance_between_lists([1, 2, 3, 3, 3, 4], [3, 3, 3, 4, 5, 9])
-        self.assertEqual(result, 11)
 
 if __name__ == '__main__':
     unittest.main()
