@@ -11,11 +11,11 @@ class TestMainFunctions(unittest.TestCase):
             self.input_sample_one = file.read()
 
     def test_part_one(self):
-        result = part_one(self.input_sample_one.strip())
+        result = part_one(self.input_sample_one)
         self.assertEqual(result, 11)
     
     def test_parse_input(self):
-        result = parse_input(self.input_sample_one.strip())
+        result = parse_input(self.input_sample_one)
         self.assertEqual(result, ([1, 2, 3, 3, 3, 4], [3, 3, 3, 4, 5, 9]))
 
 if __name__ == '__main__':

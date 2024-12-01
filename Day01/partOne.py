@@ -9,14 +9,9 @@ def parse_input(input_data, verbose = False):
     for row in input_data:
         row_index += 1
         numbers = re.findall(r'\d+', row)
+        left_list.append(int(numbers[0]))
+        right_list.append(int(numbers[1]))
 
-        if verbose:
-            print('row [', row_index, '] = ', row, numbers)
-
-        if numbers and len(numbers) == 2:
-            left_list.append(int(numbers[0]))
-            right_list.append(int(numbers[1]))
-            
     left_list.sort()
     right_list.sort()
 
