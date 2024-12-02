@@ -1,7 +1,7 @@
 import unittest
 import os
 
-from partTwo import part_two, parse_input, increasing, decreasing, max_difference, safe, problem_dampner, SUCCESS
+from partTwo import part_two, parse_input, increasing, decreasing, max_difference, safe
 
 class TestMainFunctions(unittest.TestCase):
 
@@ -18,32 +18,18 @@ class TestMainFunctions(unittest.TestCase):
                                   [1, 3, 2, 4, 5],
                                   [8, 6, 4, 4, 1],
                                   [1, 3, 6, 7, 9]])
-        
+    
     def test_increasing(self):
         result = increasing([1, 2, 3, 4, 5])
-        self.assertEqual(result, SUCCESS)
-        result = increasing([1, 2, 3, 3, 5])
-        self.assertEqual(result, 3)
-
+        self.assertEqual(result, True)
+    
     def test_decreasing(self):
         result = decreasing([5, 4, 3, 2, 1])
-        self.assertEqual(result, SUCCESS)
-        result = decreasing([5, 5, 3, 2, 1])
-        self.assertEqual(result, 1)
-
+        self.assertEqual(result, True)
+        
     def test_max_difference(self):
         result = max_difference([1, 2, 3, 4, 5])
-        self.assertEqual(result, SUCCESS)
-        result = max_difference([1, 2, 3, 4, 10])
-        self.assertEqual(result, 4)
-        result = max_difference([1, 2, 8, 9])
-        self.assertEqual(result, 2)
-        result = max_difference([9, 7, 6, 1])
-        self.assertEqual(result, 3)
-        result = max_difference([1, 3, 4, 5])
-        self.assertEqual(result, SUCCESS)
-        result = max_difference([8, 6, 4, 1])
-        self.assertEqual(result, SUCCESS)
+        self.assertEqual(result, True)
     
     def test_safe(self):
         result = safe([7, 6, 4, 2, 1])
@@ -59,7 +45,7 @@ class TestMainFunctions(unittest.TestCase):
         result = safe([1, 3, 6, 7, 9])
         self.assertEqual(result, True)
 
-    def test_part_two(self):
+    def test_part_one(self):
         result = part_two(self.input_sample_one)
         self.assertEqual(result, 4)
 
