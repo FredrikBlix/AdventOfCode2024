@@ -12,19 +12,18 @@ def decreasing(row):
             return False
     return True
 
-def max_difference(row, max_diff):
+def max_difference(row):
+    max_diff = 3
     for i in range(len(row) - 1):
         if abs(row[i] - row[i + 1]) > max_diff:
             return False
     return True
 
 def is_it_safe(row):
-    
-    if not max_difference(row, 3):
+    if not max_difference(row):
         return False
-    if not increasing(row) and not decreasing(row):
+    elif not increasing(row) and not decreasing(row):
         return False
-    
     return True
 
 def parse_input(input_data):
