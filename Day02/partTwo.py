@@ -30,7 +30,7 @@ def max_difference(row):
             return i + 1
     return SUCCESS
 
-def is_it_safe(row):
+def safe(row):
     problem_index_differece = max_difference(row)
     problem_index_increasing = increasing(row)
     problem_index_decreasing = decreasing(row)
@@ -54,7 +54,7 @@ def part_two(input_data):
     data = parse_input(input_data)
     sum_safe = 0
     for row in data:
-        if is_it_safe(row):
+        if safe(row):
             sum_safe += 1
     return sum_safe
     
