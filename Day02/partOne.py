@@ -19,7 +19,7 @@ def max_difference(row):
             return False
     return True
 
-def is_it_safe(row):
+def safe(row):
     if not max_difference(row):
         return False
     elif not increasing(row) and not decreasing(row):
@@ -39,7 +39,7 @@ def part_one(input_data):
     data = parse_input(input_data)
     sum_safe = 0
     for row in data:
-        if is_it_safe(row):
+        if safe(row):
             sum_safe += 1
     return sum_safe
     

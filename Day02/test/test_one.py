@@ -1,7 +1,7 @@
 import unittest
 import os
 
-from partOne import part_one, parse_input, increasing, decreasing, max_difference, is_it_safe
+from partOne import part_one, parse_input, increasing, decreasing, max_difference, safe
 
 class TestMainFunctions(unittest.TestCase):
 
@@ -31,18 +31,18 @@ class TestMainFunctions(unittest.TestCase):
         result = max_difference([1, 2, 3, 4, 5])
         self.assertEqual(result, True)
     
-    def test_is_it_safe(self):
-        result = is_it_safe([7, 6, 4, 2, 1])
+    def test_safe(self):
+        result = safe([7, 6, 4, 2, 1])
         self.assertEqual(result, True)
-        result = is_it_safe([1, 2, 7, 8, 9])
+        result = safe([1, 2, 7, 8, 9])
         self.assertEqual(result, False)
-        result = is_it_safe([9, 7, 6, 2, 1])
+        result = safe([9, 7, 6, 2, 1])
         self.assertEqual(result, False)
-        result = is_it_safe([1, 3, 2, 4, 5])
+        result = safe([1, 3, 2, 4, 5])
         self.assertEqual(result, False)
-        result = is_it_safe([8, 6, 4, 4, 1])
+        result = safe([8, 6, 4, 4, 1])
         self.assertEqual(result, False)
-        result = is_it_safe([1, 3, 6, 7, 9])
+        result = safe([1, 3, 6, 7, 9])
         self.assertEqual(result, True)
 
     def test_part_one(self):
