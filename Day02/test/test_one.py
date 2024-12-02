@@ -28,7 +28,7 @@ class TestMainFunctions(unittest.TestCase):
         self.assertEqual(result, True)
         
     def test_max_difference(self):
-        result = max_difference([1, 2, 3, 4, 5], 3)
+        result = max_difference([1, 2, 3, 4, 5])
         self.assertEqual(result, True)
     
     def test_is_it_safe_1(self):
@@ -45,11 +45,11 @@ class TestMainFunctions(unittest.TestCase):
 
     def test_is_it_safe_4(self):
         result = is_it_safe([1, 3, 2, 4, 5])
-        self.assertEqual(result, True)
+        self.assertEqual(result, False)
 
     def test_is_it_safe_5(self):
         result = is_it_safe([8, 6, 4, 4, 1])
-        self.assertEqual(result, True)
+        self.assertEqual(result, False)
 
     def test_is_it_safe_6(self):
         result = is_it_safe([1, 3, 6, 7, 9])
@@ -57,7 +57,7 @@ class TestMainFunctions(unittest.TestCase):
 
     def test_part_one(self):
         result = part_one(self.input_sample_one)
-        self.assertEqual(result, 4)
+        self.assertEqual(result, 2)
 
 
 if __name__ == '__main__':
