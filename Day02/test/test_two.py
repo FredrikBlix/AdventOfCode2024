@@ -39,10 +39,14 @@ class TestMainFunctions(unittest.TestCase):
         result = safe([9, 7, 6, 2, 1])
         self.assertEqual(result, False)
         result = safe([1, 3, 2, 4, 5])
-        self.assertEqual(result, True)
+        self.assertEqual(result, False)
         result = safe([8, 6, 4, 4, 1])
-        self.assertEqual(result, True)
+        self.assertEqual(result, False)
         result = safe([1, 3, 6, 7, 9])
+        self.assertEqual(result, True)
+        result = safe([1, 3, 4, 5])
+        self.assertEqual(result, True)
+        result = safe([8, 6, 4, 1])
         self.assertEqual(result, True)
 
     def test_part_one(self):
