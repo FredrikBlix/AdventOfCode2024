@@ -19,25 +19,12 @@ def max_difference(row, max_diff):
     return True
 
 def is_it_safe(row):
-
-    direction = row[0] - row[1]
-    if direction == 0:
-        return False
-    elif direction < 0:
-        direction = 'up'
-    else:
-        direction = 'down'
-        
-    if direction == 'up':
-        if not increasing(row):
-            return False
-    elif direction == 'down':
-        if not decreasing(row):
-            return False
-
+    
     if not max_difference(row, 3):
         return False
-
+    if not increasing(row) and not decreasing(row):
+        return False
+    
     return True
 
 def parse_input(input_data):
