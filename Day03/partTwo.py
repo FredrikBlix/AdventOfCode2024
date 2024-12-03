@@ -16,12 +16,7 @@ def mul(row):
     return sum
 
 def parse_input(input_data):
-    list = []
-    input_data = input_data.splitlines()
-    for row in input_data:
-        operations = re.findall(r"mul\(\d+\,\d+\)|do\(\)|don\'t\(\)", row)
-        list.append(operations)
-    return list
+    return re.findall(r"mul\(\d+\,\d+\)|do\(\)|don\'t\(\)", input_data)
 
 def write_output(output_data, index):
     # Write the output data to a file
@@ -30,9 +25,4 @@ def write_output(output_data, index):
     
 def part_two(input_data):
     data = parse_input(input_data)
-    sum = 0
-    for row in data:
-        # write_output(row, data.index(row))
-        sum += mul(row)
-    return sum
-    
+    return mul(data)    
