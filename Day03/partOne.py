@@ -8,17 +8,9 @@ def mul(row):
     return sum
 
 def parse_input(input_data):
-    list = []
-    input_data = input_data.splitlines()
-    for row in input_data:
-        operations = re.findall(r"mul\(\d+\,\d+\)", row)
-        list.append(operations)
-    return list
+    return re.findall(r"mul\(\d+\,\d+\)", input_data)
 
 def part_one(input_data):
     data = parse_input(input_data)
-    sum = 0
-    for row in data:
-        sum += mul(row)
-    return sum
+    return mul(data)
     
