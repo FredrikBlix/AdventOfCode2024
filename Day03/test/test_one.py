@@ -23,7 +23,6 @@ class TestMainFunctions(unittest.TestCase):
                       'mul(11,8)',
                       'mul(8,5)'])
         self.assertEqual(result, 161)
-    
 
     def test_part_one(self):
         result = part_one(self.input_sample_one)
